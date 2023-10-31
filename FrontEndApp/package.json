@@ -1,11 +1,11 @@
 {
-  "name": "matevi-electron-app",
+  "name": "matevi-vue-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --emptyOutDir",
     "preview": "vite preview"
   },
   "dependencies": {
