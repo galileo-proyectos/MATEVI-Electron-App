@@ -8,9 +8,8 @@ async function createWindow() {
   const appBounds: any = appConfig.get("setting.appBounds");
   const BrowserWindowOptions: BrowserWindowConstructorOptions = {
     width: 1200,
-    minWidth: 900,
     height: 750,
-    minHeight: 600,
+    resizable: false,
 
     webPreferences: {
         preload: __dirname + "/preload.js",
@@ -23,6 +22,8 @@ async function createWindow() {
 
   if (appBounds !== undefined && appBounds !== null) Object.assign(BrowserWindowOptions, appBounds);
   const mainWindow = new BrowserWindow(BrowserWindowOptions);
+  console.log(mainWindow.getContentSize());
+  
 
   // and load the index.html of the app.
   // win.loadFile("index.html");
